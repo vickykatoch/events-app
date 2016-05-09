@@ -1,27 +1,47 @@
 <!DOCTYPE html>
 <html>
+
 <head lang="en">
     <meta charset="UTF-8">
     <title>Events Management</title>
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/bootstrap-slate.min.css">
+    <link rel="stylesheet" href="styles/styles.css">
 </head>
-<body ng-app="eventsApp" class="container">
-           
-           
-    <!-- Library Scripts -->       
-    <script src='node_modules/angular/angular.js'></script> 
-    
-    
-    <!-- Application & Config Script -->  
-    <script src='app/eventsApp.module.js'></script>    
-    
+
+<body ng-app="eventsApp" class="container-fluid">
+    <nav class="navbar navbar-primary">
+        <div class="navbar-header">
+            <div class="navbar-brand">Acme Events Management</div>
+        </div>
+    </nav>
+    <div >
+        <div class="menu-bar"></div>
+        <div class="view-host" ui-view>
+            <div ng-include="'app/dashboard/dashboard.html'" />
+        </div>
+    </div>
+
+    <!-- Library Scripts -->
+    <script src='node_modules/angular/angular.js'></script>
+    <script src='node_modules/angular-resource/angular-resource.min.js'></script>
+    <script src='node_modules/angular-mocks/angular-mocks.js'></script>
+
+    <!-- Application & Config Script -->
+    <script src='app/eventsApp.module.js'></script>
+
     <!-- Domain Classes -->
-    
+
     <!-- Services -->
+    <script src="app/common/services/eventService.js"></script>
     
     <!-- Controllers -->
+    <script src='app/dashboard/dashboardCtrl.js'></script>
+    <!-- Directives -->
+    <script src="app/common/directives/eventCard.js"></script>
     
-    <!-- Directives -->    
+    <!--- HTTP Mocks -->
+    <script src='mocks/eventResourceMock.js'></script>
 </body>
 
 </html>

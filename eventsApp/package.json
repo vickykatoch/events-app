@@ -19,6 +19,9 @@
   "homepage": "https://github.com/vickykatoch/events-app#readme",
   "dependencies": {
     "angular": "^1.5.5",
-    "bootstrap": "^3.3.6"
+    "angular-mocks": "^1.5.5",
+    "angular-resource": "^1.5.5",
+    "bootstrap": "^3.3.6",
+    "font-awesome": "^4.6.1"
   }
 }
